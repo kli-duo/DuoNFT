@@ -1,0 +1,17 @@
+version: "3.5"
+
+services:
+  scripts:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    entrypoint: /bin/bash -c
+    environment:
+      - PYTHONUNBUFFERED=1
+    image: NFT:scripts
+    # Don't create own network, as that causes issues on Jenkins
+    network_mode: bridge
+    volumes:
+      - .:/code
+      - /code/node_modules
+      - ~/.aws:/root/.aws

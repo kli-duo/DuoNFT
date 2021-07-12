@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Runs the given command in Docker
+
+set -eu -o pipefail
+
+# Use $* instead of $@ because bash -c only takes one argument
+docker-compose build scripts
+docker-compose run --rm scripts "$*"

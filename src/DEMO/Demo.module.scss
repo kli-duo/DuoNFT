@@ -1,0 +1,19 @@
+@use "../constants" as c;
+
+.duo {
+  height: 24 * c.$juicy-length;
+  width: 24 * c.$juicy-length;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: c.$juicy-length;
+}
+
+.wrap {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: c.$juicy-length;
+}
