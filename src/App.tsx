@@ -1,12 +1,23 @@
 import "web-ui/dist/esm/src/styles/fonts.scss";
 
-import styles from "./App.module.scss";
-import Demo from "./DEMO/Demo";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+
+import "./App.css";
+import NFTPage from "./NFT/NFTPage.js";
 
 const App = () => (
-  <div className={styles.app}>
-    <Demo />
-  </div>
+  <Router>
+    <Switch>
+      <Route exact={true} path="/">
+        <NFTPage />
+      </Route>
+      <Route exact={true} path="/NFT">
+        {/* <div className={styles.app}> */}
+        <NFTPage />
+        {/* </div> */}
+      </Route>
+    </Switch>
+  </Router>
 );
 
 export default App;
