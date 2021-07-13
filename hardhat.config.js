@@ -4,11 +4,11 @@ require("@openzeppelin/hardhat-upgrades");
 require("dotenv").config();
 require("hardhat-contract-sizer");
 
-const { alchemyApiKey, privateKey, mnemonic } = require("./secrets.json");
+// const { alchemyApiKey, privateKey, mnemonic } = require("./secrets.json");
 
-// const alchemyApiKey = process.env.ALCHEMY_API_KEY
-// const privateKey = process.env.PRIVATE_KEY
-// const mnemonic = process.env.MNEMONIC
+const alchemyApiKey = process.env.ALCHEMY_API_KEY;
+const privateKey = process.env.PRIVATE_KEY;
+const mnemonic = process.env.MNEMONIC;
 // console.log(alchemyApiKey)
 /**
  * @type import('hardhat/config').HardhatUserConfig
