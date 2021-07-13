@@ -39,4 +39,5 @@ secrets.*
 .openzeppelin
 cache
 DuoAssets
-src/artifacts
+src/artifacts/@openzeppelin
+src/artifacts/build-info
